@@ -1,2 +1,2 @@
-# dotfiles
-Some configuration files
+# Linux configurations
+Some configuration files for linux
