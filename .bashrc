@@ -118,7 +118,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Modification de la variable PATH pour intégrer les scripts
+# Modification de la variable PATH pour intégrer les scripts et les programmes
 PATH=$PATH:~/scripts:~/Programmes
 
 
