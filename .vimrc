@@ -1,20 +1,5 @@
-"   Sections:
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" Edited version of Amir Salihefendic — @amix3k's basic.vim
+" --> https://github.com/amix/vimrc.git
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -45,7 +30,7 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-" Remplace esc par jk pour plus de rapidité 
+" Replace ESC by 'jk'
 inoremap jk <ESC>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,56 +39,56 @@ inoremap jk <ESC>
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Ajoute le nombre le lignes
+" Display line number
 set number
 
 "Always show current position
 set ruler
 
-" Active le wildmenu
+" Enable wildmenu
 set wildmenu
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore la casse
+" Ignore case
 set ignorecase
 
-" Recherche en prenant la casse en compte
+" Enable smartcase
 set smartcase
 
-" Surligne les résultats de recherche
+" Highlight search results
 set hlsearch
 
-" Améliore la recherche
+" Increase search
 set incsearch
 
-" Optimisation mémoire
+" Perf optimisation
 set noswapfile
 set lazyredraw
 set nobackup
 
-" Permet la recherche dans tous les sous dossiers
+" Enable search in all subfolders 
 set path+=**
 
-" Active les expression régulière
+" Set magic for RegEx
 set magic
 
-" Désactive les sons d'erreurs
+" Disable errors sounds
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
-" Ajoute un petite marge à gauche
+" Add a little marge on the left
 set foldcolumn=1
 
-" Une tabulation = 4 espaces
+" Tabulation = 4 espaces
 set shiftwidth=4
 set tabstop=4
 
-" Montre le statut de ligne
+" Enable line status
 set laststatus=2
 
 
@@ -114,7 +99,7 @@ set laststatus=2
 syntax enable
 
 
-" Options supplémentaire pour le GUI mode
+" More options dor GUI mode
 if has("gui_running")
 	set guioption-=T
 	set guioption-=e
@@ -123,7 +108,7 @@ if has("gui_running")
 endif
 
 
-" UTF8 par défaut
+" UTF8 by default
 set encoding=utf8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
