@@ -118,9 +118,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Modification de la variable PATH pour intégrer les scripts et les programmes
-PATH=$PATH:~/scripts:~/Programmes
+# Modification de la variable PATH pour intégrer les scripts
+PATH=$PATH:~/Scripts
 
-
-# Remapping de CapsLock en Control_L
-keymapping.sh
