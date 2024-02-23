@@ -76,7 +76,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
+    #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
@@ -91,8 +91,21 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias up='sudo apt update && sudo apt upgrade -y'
 alias vi='vim'
-alias up='sudo apt update && sudo apt upgrade'
+alias cls='clear'
+alias calc='bc -l'
+alias ping='ping -c 5'
+alias ports='netstat -tulanp'
+alias cours='cd ~/kDrive/Documents/HES/Cours/'
+
+alias vi='nvim'
+alias vim='nvim'
+
+alias add='git add .'
+alias push='git push'
+alias pull='git pull'
+alias commit='git commit -m'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -118,6 +131,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Modification de la variable PATH pour intégrer les scripts
-PATH=$PATH:~/Scripts
-
+# Modification de la variable PATH pour intégrer les scripts et programmes
+PATH=$PATH:~/Scripts:~/.local/bin:~/AppImages
+export JAVA_HOME=/usr/local/jdk-21
+export PATH=$JAVA_HOME/bin:$PATH
