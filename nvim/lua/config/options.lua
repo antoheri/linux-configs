@@ -1,23 +1,19 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVi	m/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
-vim.opt.nu = true
+-- Taille des tabulations
+vim.opt.tabstop = 4         -- Définit la largeur d'une tabulation à 4 espaces
+vim.opt.shiftwidth = 4      -- Définit l'indentation à 4 espaces
+vim.opt.expandtab = true    -- Remplacer les tabulations par des espaces
+vim.opt.softtabstop = 4     -- Définit que chaque pression de tabulation insère 4 espaces
+
+
+-- Afficher les numéros de lignes relatifs
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- Définiton des mappings
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open Netrw" })
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-
-vim.opt.updatetime = 50
